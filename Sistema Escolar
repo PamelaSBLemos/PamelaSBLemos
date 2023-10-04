@@ -1,0 +1,364 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Eduardo, Luiz e Pâmela
+// Data atual  : 02/10/2023
+Var
+// Seção de Declarações das variáveis 
+alunos: vetor[1..14, 0..3] de caractere
+notas: vetor[1..14, 0..14] de real
+opcao, matr, idade, i, j, id: inteiro
+disciplina, nome: caractere
+soma, media: real
+
+procedimento cadastro_Aluno
+
+var
+
+nome: caractere
+idade, matr: inteiro
+situacao_Cadastro: logico
+
+inicio
+
+
+limpatela
+escreval("Cadastrar novo aluno - Sistema Escolar PROZ")
+escreval("Digite o nome do aluno: ")
+
+leia(nome)
+escreval("Digite a idade do aluno: ")
+leia(idade)
+escreval("Digite a matrícula do aluno: ")
+leia(matr)
+
+
+para i de 1 ate 14 faca
+   se (alunos[i] = "0") entao
+           alunos[i, 0] <- Numpcarac(i)
+           alunos[i, 1] <- Numpcarac(matr)
+           alunos[i, 2] <- nome
+           alunos[i, 3] <- Numpcarac(idade)
+           notas[i, 0] <- i
+           situacao_Cadastro <- verdadeiro
+           interrompa
+   senao
+        situacao_Cadastro <- falso
+   fimse
+fimpara
+
+fimprocedimento
+
+procedimento inserir_Notas
+var
+mate: inteiro
+ver: logico
+nota: real
+
+inicio
+
+
+limpatela
+
+enquanto opcao <> 4 faca
+   limpatela
+   enquanto verdadeiro faca
+      escreval("Inclusão de notas - Sistema Escolar PROZ")
+      escreval("[1] Algoritmo")
+      escreval("[2] Segurança")
+      escreval("[3] Desenvolvimento Web")
+      escreval("[4] Sair")
+      leia(opcao)
+      se (opcao >= 1) e (opcao <= 4) entao
+         interrompa
+      senao
+        limpatela
+        escreval("ERRO: Digite uma opção válida!")
+      fimse
+   fimenquanto
+
+   se (opcao = 4) entao
+      interrompa
+   fimse
+
+   limpatela
+   
+   enquanto verdadeiro faca
+      escreval("Inclusão de notas - Sistema Escolar PROZ PROZ")
+      escreval("Digite a matricula do aluno: ")
+      leia(matr)
+      se (verificamatr(matr) = verdadeiro) entao
+         interrompa
+      senao
+           limpatela
+           escreval("ERRO: Digite uma matrícula válida!")
+      fimse
+   fimenquanto
+
+   escolha (opcao)
+           caso 1
+                adicionar_Nota(1, matr)
+           caso 2
+                adicionar_Nota(2, matr)
+           caso 3
+                adicionar_Nota(3, matr)
+           caso 4
+                interrompa
+   fimescolha
+fimenquanto
+fimprocedimento
+
+procedimento adicionar_Nota(disciplina, matr: inteiro)
+var
+notas_Adicionais: vetor[1..5] de real
+
+inicio
+
+para i de 1 ate 5 faca
+     //escreval("matrícula: ", matr, " disciplina: ",disciplina, " id: ", id)
+     limpatela
+     enquanto verdadeiro faca
+              escreval("Inclusão de notas - Sistema Escolar PROZ")
+              escreval("Digite a ", i, "° nota a ser inserida: ")
+              
+              leia(notas_Adicionais[i])
+              
+              se (notas_Adicionais[i] >= 1) e (notas_Adicionais[i] <= 10) entao
+                 interrompa
+              senao
+                   limpatela
+                   escreval("ERRO: Digite uma nota válida!")
+              fimse
+     fimenquanto
+     //escreval(notas_Adicionais[i])
+fimpara
+
+escolha (disciplina)
+        caso 1
+             para i de 1 ate 5 faca
+                  notas[id, i] <- notas_Adicionais[i]
+             fimpara
+        caso 2
+             para i de 6 ate 10 faca
+                  notas[id, i] <- notas_Adicionais[i-5]
+             fimpara
+        caso 3
+             para i de 11 ate 14 faca
+                  notas[id, i] <- notas_Adicionais[i-10]
+             fimpara
+fimescolha
+//escreval("matrícula: ", matr, " disciplina: ",disciplina, " id: ", id)
+
+fimprocedimento
+
+funcao verificamatr(matr: inteiro): logico
+
+var
+aluno_Localizado: logico
+
+inicio
+
+para i de 1 ate 14 faca
+     se (alunos[i, 1] = Numpcarac(matr)) entao
+        aluno_Localizado <- verdadeiro
+        id <- Caracpnum(alunos[i, 0])
+        //escreval("Dentro da função verificamatr, aluno_Localizado: ", aluno_Localizado)
+        interrompa
+     senao
+          se ( i = 14) entao
+             aluno_Localizado <- falso
+             //escreval("Dentro da função verificamatr, aluno_Localizado: ", aluno_Localizado)
+          fimse
+     fimse
+fimpara
+
+retorne aluno_Localizado
+
+fimfuncao
+
+procedimento gerarRelatorioDesempenho
+
+var
+mediaAlgo, mediaSeg, mediaDevWeb: real
+
+inicio
+enquanto opcao <> 2 faca
+   limpatela
+   enquanto verdadeiro faca
+      escreval("Gerar Relatório de Desempenho - Sistema Escolar PROZ")
+      escreval("Digite o número da matrícula do aluno: ")
+      leia(matr)
+      se (verificamatr(matr) = verdadeiro) entao
+         interrompa
+      senao
+           limpatela
+           escreval("ERRO: Digite uma matrícula válida!")
+      fimse
+   fimenquanto
+
+   para i de 1 ate 3 faca
+        escolha (i)
+                caso 1
+                     para j de 1 ate 5 faca
+                          mediaAlgo <- notas[id, j] + mediaAlgo
+                          escreval(notas[id, j])
+                     fimpara
+                     mediaAlgo <- mediaAlgo / 5
+                caso 2
+                     para j de 6 ate 10 faca
+                          mediaSeg <- notas[id, j] + mediaSeg
+                     fimpara
+                     mediaSeg <- mediaSeg / 5
+                caso 3
+                     para j de 11 ate 14 faca
+                          mediaDevWeb <- notas[id, j] + mediaDevWeb
+                     fimpara
+                     mediaDevWeb <- mediaDevWeb / 5
+        fimescolha
+   fimpara
+
+   limpatela
+   escreval("Consultar informações - Sistema Escolar PROZ")
+   escreval("Nome: ", alunos[id, 2])
+   escreval("Idade: ", alunos[id, 3])
+   escreval("Média Algoritmo: ", mediaAlgo)
+   escreval("Média Segurança: ", mediaSeg)
+   escreval("Média Desenvolvimento Web: ", mediaDevWeb)
+
+   repita
+         escreval("[1] Fazer uma nova consulta")
+         escreval("[2] Sair")
+         leia(opcao)
+   ate (opcao >= 1) e (opcao <= 2)
+fimenquanto
+
+fimprocedimento
+
+procedimento consultar_Registro
+Var
+opcao: inteiro
+
+inicio
+opcao <- 0
+enquanto opcao <> 2 faca
+   limpatela
+   enquanto verdadeiro faca
+      escreval("Gerar Relatório de Desempenho - Sistema Escolar PROZ")
+      escreval("Digite o número da matrícula do aluno: ")
+      leia(matr)
+      se (verificamatr(matr) = verdadeiro) entao
+         interrompa
+      senao
+           limpatela
+           escreval("ERRO: Digite uma matrícula!")
+      fimse
+   fimenquanto
+
+   limpatela
+   escreval("Consultar registro - Sistema Escolar PROZ")
+   escreval("Nome: ", alunos[id, 2])
+   escreval("Idade: ", alunos[id, 3])
+   para i de 1 ate 3 faca
+        escolha (i)
+                caso 1
+                     escreval("+Disciplina: Algoritmo ")
+                     para j de 1 ate 5 faca
+                          escreva(notas[id, j], " ")
+                     fimpara
+                     escreval
+                caso 2
+                     escreval("+Disciplina: Segurança ")
+                     para j de 6 ate 10 faca
+                          escreva(notas[id, j], " ")
+                     fimpara
+                     escreval
+                caso 3
+                     escreval("+Disciplina: Desenvolvimento Web ")
+                     para j de 11 ate 14 faca
+                          escreva(notas[id, j], " ")
+                     fimpara
+                     escreval
+        fimescolha
+   fimpara
+
+   repita
+         escreval("[1] Fazer uma nova consulta")
+         escreval("[2] Sair")
+         leia(opcao)
+   ate (opcao >= 1) e (opcao <= 2)
+fimenquanto
+fimprocedimento
+
+funcao verifica_Menu(opcao: inteiro):logico
+inicio
+se (opcao >= 1) e (opcao <= 5) entao
+   retorne verdadeiro
+senao
+     limpatela
+     escreval("ERRO: Digite uma opção válida e tente novamente.")
+     retorne falso
+fimse
+fimfuncao
+
+procedimento menu
+
+inicio
+escreval("Menu - Sistemas Escolar PROZ")
+se (alunos[14] = "0") entao
+   escreval("[1] Cadastrar novo aluno [14]")
+senao
+   escreval("[1] Cadastrar novo alunos")
+fimse
+escreval("[2] Incluir notas")
+escreval("[3] Consultar informações")
+escreval("[4] Gerar relatório de desempenho")
+escreval("[5] Sair")
+leia(opcao)
+
+fimprocedimento
+
+Inicio
+opcao <- 0
+para i de 1 ate 14 faca
+     alunos[i, 0] <- Numpcarac(0)
+     alunos[i, 1] <- Numpcarac(0)
+     alunos[i, 2] <- Numpcarac(0)
+     alunos[i, 3] <- Numpcarac(0)
+
+     notas[i, 0] <- 0
+     notas[i, 1] <- 0
+     notas[i, 2] <- 0
+     notas[i, 3] <- 0
+     notas[i, 4] <- 0
+     notas[i, 5] <- 0
+     notas[i, 6] <- 0
+     notas[i, 7] <- 0
+     notas[i, 8] <- 0
+     notas[i, 9] <- 0
+     notas[i, 10] <- 0
+     notas[i, 11] <- 0
+     notas[i, 12] <- 0
+     notas[i, 13] <- 0
+     notas[i, 14] <- 0
+fimpara
+
+enquanto opcao <> 5 faca
+   repita
+         menu
+   ate(verifica_Menu(opcao) = verdadeiro)
+   escolha(opcao)
+                 caso 1
+                      cadastro_Aluno
+                 caso 2
+                      inserir_Notas
+                 caso 3
+                      consultar_Registro
+                 caso 4
+                      gerarRelatorioDesempenho
+   fimescolha
+   limpatela
+fimenquanto
+
+
+Fimalgoritmo
