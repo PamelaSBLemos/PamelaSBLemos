@@ -1,0 +1,26 @@
+Sub IMPRIMIR()
+ 
+Sheets("ESTOQUE").Select
+Range("A4:M16").Select
+
+copias = InputBox("Quantas cópias?")
+    
+    Previa
+    Application.Dialogs(xlDialogPrinterSetup).Show
+    Selection.PrintOut Copies:=Int(copias), Collate:=True
+          
+
+End Sub
+
+Sub Previa()
+
+Dim Resp As VbMsgBoxResult
+
+    ActiveWindow.RangeSelection.PrintPreview
+    Resp = MsgBox("Continuar com impressão?", vbYesNo)
+    
+        If Resp = vbNo Then
+        End
+        End If
+
+End Sub

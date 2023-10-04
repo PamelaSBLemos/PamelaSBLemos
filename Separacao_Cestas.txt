@@ -1,0 +1,1944 @@
+Sub SEPARACAO_CESTAS()
+  
+    ''Não permitir cadastrar faltando dados
+     
+     If Range("C9") = Empty Or Range("F9") = Empty Or Range("J9") = Empty Then
+     MsgBox ("Preencha situação, data e operador.")
+     Exit Sub
+     End If
+     
+     'Desabilitando a atualização tela pique ao gravar'
+    
+    Application.ScreenUpdating = False
+    
+     '' POSTO 01
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B13").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("D15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C19").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    
+      '' POSTO 02
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F13").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G19").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+       
+    
+    
+    
+    
+    '' POSTO 03
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J13").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("L15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K19").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    
+    
+    
+    
+    
+    '' POSTO 04
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N13").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("P15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O19").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    '' POSTO 05
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R13").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("T15").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S17").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S19").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    
+     '' POSTO 06
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B21").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("D23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C27").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    '' POSTO 07
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F21").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G27").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    '' POSTO 08
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J21").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("L23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K27").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    '' POSTO 09
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N21").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("P23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O27").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+        '' POSTO 10
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R21").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("T23").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S25").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S27").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+            '' POSTO 11
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B29").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("D31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C35").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+            '' POSTO 12
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F29").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G35").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+            '' POSTO 13
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J29").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("L31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K35").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+            '' POSTO 14
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N29").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("P31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O35").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+            '' POSTO 15
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R29").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("T31").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S33").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S35").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+                '' POSTO 16
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B37").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("D39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("B41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C43").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+                '' POSTO 17
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F37").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("G43").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+    
+                '' POSTO 18
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J37").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("L39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("K43").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+                '' POSTO 19
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N37").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("P39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("N41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("O43").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+    
+    
+                 '' POSTO 20
+    
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").EntireRow.Insert
+    
+       
+    ''Copia codigo (ID)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+   ''Copia lote (ID LOTE)
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("H7").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+     
+    ''Copia situação
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("C9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Data. Cadastro
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("F9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+   ''Copia operador
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("J9").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''copia posto
+        
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R37").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("F9").PasteSpecial xlPasteValues
+    
+  
+    ''Copia cesta 01
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 03
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("T39").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+     ''Copia cesta 01/02
+    
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("R41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 02/02
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S41").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+    ''Copia total
+            
+    Sheets("SEPARAÇÃO DE CESTAS").Select
+    Range("S43").Copy
+    Sheets("ABASTECIMENTO POSTOS").Select
+    Range("L9").PasteSpecial xlPasteValues
+        
+    ''Mensagem de cadastro
+    
+    MsgBox ("Distribuição realizada com sucesso!")
+    
+              
+End Sub
+

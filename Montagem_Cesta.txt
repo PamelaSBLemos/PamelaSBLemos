@@ -1,0 +1,249 @@
+Sub MONTAGEM_CESTA()
+
+    ''Não permitir cadastrar faltando DATA E OPERADOR
+    
+    If Range("L10") = Empty Or Range("L12") = Empty Or Range("L14") = Empty Then
+     MsgBox ("Preencha a data e operador")
+     Exit Sub
+     End If
+     
+     ''Desabilitando a atualização tela pique ao gravar'
+    
+    Application.ScreenUpdating = False
+    
+    Sheets("CESTAS MONTADAS").Select
+    Range("B9").EntireRow.Insert
+     
+   
+     ''Copia id lote
+            
+    Sheets("MONTAGEM CESTA").Select
+    Range("E8").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("B9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia lote cesta
+            
+    Sheets("MONTAGEM CESTA").Select
+    Range("G8").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("C9").PasteSpecial xlPasteValues
+    
+    ''Copia data
+                
+    Sheets("MONTAGEM CESTA").Select
+    Range("L10").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("D9").PasteSpecial xlPasteValuesAndNumberFormats
+    
+    
+    ''Copia operador
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("L12").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("E9").PasteSpecial xlPasteValues
+    
+    ''Copia situação
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("L8").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("AE9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia cesta 1
+                    
+    Sheets("MONTAGEM CESTA").Select
+    Range("B12").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("G9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 2
+                    
+    Sheets("MONTAGEM CESTA").Select
+    Range("C12").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("H9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 3
+                    
+    Sheets("MONTAGEM CESTA").Select
+    Range("D12").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("I9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 1/2
+                    
+    Sheets("MONTAGEM CESTA").Select
+    Range("B14").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("J9").PasteSpecial xlPasteValues
+    
+    ''Copia cesta 2/2
+                    
+    Sheets("MONTAGEM CESTA").Select
+    Range("C14").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("K9").PasteSpecial xlPasteValues
+    
+       
+    ''Copia cesta doaçao
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D14").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("L9").PasteSpecial xlPasteValues
+    
+        
+    ''Copia total cestas
+    
+    Sheets("MONTAGEM CESTA").Select
+    Range("L14").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("M9").PasteSpecial xlPasteValues
+    
+    ''Copia arroz
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D25").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("N9").PasteSpecial xlPasteValues
+    
+    ''Copia Feijão
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D26").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("O9").PasteSpecial xlPasteValues
+    
+   ''Copia fuba
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D27").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("P9").PasteSpecial xlPasteValues
+    
+   ''Copia açucar
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D28").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("Q9").PasteSpecial xlPasteValues
+    
+   ''Copia espaguete
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D29").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("R9").PasteSpecial xlPasteValues
+    
+    ''Copia cafe
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D30").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("S9").PasteSpecial xlPasteValues
+    
+    ''Copia oleo
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D31").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("T9").PasteSpecial xlPasteValues
+
+    ''Copia sal
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D32").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("U9").PasteSpecial xlPasteValues
+    
+    ''Copia sabao
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D33").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("V9").PasteSpecial xlPasteValues
+    
+    
+    ''Copia C1-CP Fardo 60x40x10
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D34").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("W9").PasteSpecial xlPasteValues
+    
+    ''Copia C2e3-Capa de Fardo 80x50x10
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D35").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("X9").PasteSpecial xlPasteValues
+    
+    ''Copia Embalagem 17x25
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D36").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("Y9").PasteSpecial xlPasteValues
+    
+    ''Copia Embalagem 17x35
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D37").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("Z9").PasteSpecial xlPasteValues
+    
+    ''Copia Embalagem 20x30
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D38").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("AA9").PasteSpecial xlPasteValues
+    
+    ''Copia Embalagem 25x35
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D39").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("AB9").PasteSpecial xlPasteValues
+     
+     
+    ''Copia Embalagem 35x45x10 (corte)
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D40").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("AC9").PasteSpecial xlPasteValues
+     
+    ''Copia fita
+                        
+    Sheets("MONTAGEM CESTA").Select
+    Range("D41").Copy
+    Sheets("CESTAS MONTADAS").Select
+    Range("AD9").PasteSpecial xlPasteValues
+
+
+    ''Apagando depois de cadastrar
+    
+    Sheets("MONTAGEM CESTA").Select
+    Range("L10").ClearContents 'data
+    Range("L12").ClearContents 'operador
+    Range("L8").ClearContents 'situaçao
+    Range("B12").ClearContents 'cesta 1
+    Range("C12").ClearContents 'cesta 2
+    Range("D12").ClearContents 'cesta 3
+    Range("B14").ClearContents 'cesta 1/2
+    Range("C14").ClearContents 'cesta 2/2
+    Range("D14").ClearContents 'cesta doação
+    
+    
+        
+    ''Mensagem de MONTAGEM CESTA
+    
+    MsgBox ("Cesta montada com sucesso!")
+
+End Sub
+
