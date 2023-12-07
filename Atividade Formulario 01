@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - 1</title>
+    <title>Lista Formularios</title>
 </head>
 <body>
-    <h1>Manuntenção de usuarios do sistema interno</h1>
-    
-    <label for="login">Login:</label>
-    <input name="login" type="text">
+        <div> 
+            <h4>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</h4>
+        </div>
+
+    <form action="GET">
+
+        <label for="login">Login:</label>
+        <input name="login" type="text">
+
     <br><br>
-    <label for="senha">Senha:</label>
-    <input name="senha" type="password">
+
+        <label for="senha">Senha:</label>
+        <input name="senha" type="password">
+
     <br><br>
-    <label for="status">Status</label>
+
+    <label for="">Status:</label>
     <select name="status">
-        <option value="AT">ativo</option>
-            <option value="INT">inativo</option>
+        <option value="ativo">Ativo</option>
+        <option value="inativo">Inativo</option>
     </select>
-    <br><br>
-    <label for="tipo">Tipo:</label>
-    <input type="radio" name="tipo" value="tec"> Tecnico
-    <input type="radio" name="tipo" value="prof"> Professor
-    <input type="radio" name="tipo" value="al">Aluno
 
     <br><br>
-    <label for="data">Data:</label>
-    <input type="date" name="data">
-    <br><br>
-    <label for="perfil">Perfil:</label>
-    <input type="radio" name="perfil" value="convid"> Convidado
-    <input type="radio" name="perfil" value="adm"> Administrador
 
-    <p>Observações:</p>
-    <textarea name="obs" cols="30" rows="10"></textarea>
+        <label>Tipo: </label>
+     
+        <input name="tipo" type="radio" value="Tecnico">  
+        <label for="tipo">Técnico</label>
+    
+        <input name="tipo" type="radio" value="Professor">
+        <label for="tipo">Professor</label>
+    
+        <input name="tipo" type="radio" value="Aluno">
+        <label for="tipo">Aluno</label>
+    
     <br><br>
-    <label for="modulo">Modulos:</label>
-    <input type="checkbox" name="modulo" value="comp"> Compras
-    <input type="checkbox" name="modulo" value="Bibli"> Biblioteca
-    <input type="checkbox" name="modulo" value="Acm"> Academico
+
+        <label for="data">Data Criação:</label>
+        <input name="data" type="date">
+    
     <br><br>
-    <input type="checkbox" name="modulo" value="doc"> Documentação
-    <input type="checkbox" name="modulo" value="rh"> Recursos Humanos
+
+        <label>Perfil: </label>
+     
+        <input name="perfil" type="radio" value="convidado">  
+        <label for="perfil">Convidado</label>
+    
+        <input name="perfil" type="radio" value="adminstrador">
+        <label for="perfil">Adminstrador</label>
+
     <br><br>
-    <input type="submit" name="cst" value="Confirmar"> 
-    <input type="reset" name="reset" value="Excluir">
+
+        <label for="observacao">Observação: </label>
+    
+        <textarea name="observacao" cols="20" rows="3"></textarea>
+
+    <br><br>
+
+        <label>Perfil: </label>
+     
+        <input name="mod" type="checkbox" value="compras">  
+        <label for="mod">Compras</label>
+
+        <input name="mod" type="checkbox" value="biblioteca">  
+        <label for="mod">Biblioteca</label>
+
+        <input name="mod" type="checkbox" value="academico">  
+        <label for="mod">Acadêmico</label>
+
+    <br><br>
+
+        <input name="mod" type="checkbox" value="documentacao">  
+        <label for="mod">Documentação</label>
+
+        <input name="mod" type="checkbox" value="recursos humanos">  
+        <label for="mod">Recursos Humanos</label>
+
+    <br><br>
+
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Excluir">
+
+    </form>
+
 </body>
 </html>
