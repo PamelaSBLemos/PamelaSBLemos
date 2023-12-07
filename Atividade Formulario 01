@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - 1</title>
+</head>
+<body>
+    <h1>Manuntenção de usuarios do sistema interno</h1>
+    
+    <label for="login">Login:</label>
+    <input name="login" type="text">
+    <br><br>
+    <label for="senha">Senha:</label>
+    <input name="senha" type="password">
+    <br><br>
+    <label for="status">Status</label>
+    <select name="status">
+        <option value="AT">ativo</option>
+            <option value="INT">inativo</option>
+    </select>
+    <br><br>
+    <label for="tipo">Tipo:</label>
+    <input type="radio" name="tipo" value="tec"> Tecnico
+    <input type="radio" name="tipo" value="prof"> Professor
+    <input type="radio" name="tipo" value="al">Aluno
+
+    <br><br>
+    <label for="data">Data:</label>
+    <input type="date" name="data">
+    <br><br>
+    <label for="perfil">Perfil:</label>
+    <input type="radio" name="perfil" value="convid"> Convidado
+    <input type="radio" name="perfil" value="adm"> Administrador
+
+    <p>Observações:</p>
+    <textarea name="obs" cols="30" rows="10"></textarea>
+    <br><br>
+    <label for="modulo">Modulos:</label>
+    <input type="checkbox" name="modulo" value="comp"> Compras
+    <input type="checkbox" name="modulo" value="Bibli"> Biblioteca
+    <input type="checkbox" name="modulo" value="Acm"> Academico
+    <br><br>
+    <input type="checkbox" name="modulo" value="doc"> Documentação
+    <input type="checkbox" name="modulo" value="rh"> Recursos Humanos
+    <br><br>
+    <input type="submit" name="cst" value="Confirmar"> 
+    <input type="reset" name="reset" value="Excluir">
+</body>
+</html>
