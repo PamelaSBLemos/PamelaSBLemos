@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 2%;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #67d86a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fale Conosco</h1>
+    <p>Estamos disponíveis 24h.</p>
+    
+    <form>
+        <label for="nome">Nome:</label>
+        <input name="name" type="text" >
+
+        <label for="snome">Sobrenome:</label>
+        <input name="sname" type="text">
+
+        <label for="email">E-mail:</label>
+        <input name="email" type="email">
+
+        <label for="mens">Mensagem:</label>
+        <textarea name="descricao" cols="30" rows="5" placeholder="Digite aqui..."></textarea>
+
+        <input type="submit" value="Cadastrar">
+
+        <br>
+
+        <a href="Q_2_blog.html">Questão 2</a>
+		
+      
+    </form>
+</body>
+</html>
